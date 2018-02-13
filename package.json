@@ -1,0 +1,16 @@
+{
+  "name": "salinger.me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "view-engine": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "SalingerMS",
+  "license": "MIT"
+}
