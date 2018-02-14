@@ -148,9 +148,12 @@ body .back-holder {
     transition: left 0ms ease-in-out 0ms;
 }
 canvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+}
+#background{
+
 }
 body {
   /* background-image: url("/img/backgrounds/white-line.jpg"); */

@@ -1,7 +1,8 @@
 // localStorage point managment
 storage = {
   getData: function() {
-    var points = localStorage.getItem('points');
+    var points;
+    // = localStorage.getItem('points');
     if (!points) {
       return [];
     } else {
@@ -29,8 +30,8 @@ $(function() {
 
   // Stroke details
   // path.strokeColor = 'rgb(220,220,220)';
-  path.strokeColor = 'rgb(0, 255, 0)';
-  path.strokeWidth = 0.5;
+  path.strokeColor = 'rgb(234,178,156)';
+  path.strokeWidth = 1;
   // path.fullySelected = true;
   // path.dashArray = [2, 4];
 
@@ -85,4 +86,3 @@ $(function() {
 $(window).load(function() {
   $(window).resize();
 });
-
