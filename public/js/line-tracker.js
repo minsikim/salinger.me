@@ -1,8 +1,8 @@
 // localStorage point managment
 storage = {
   getData: function() {
-    // var points;
-    var points = localStorage.getItem('points');
+    var points;
+    // var points = localStorage.getItem('points');
     if (!points) {
       return [];
     } else {
@@ -19,6 +19,12 @@ storage = {
   }
 }
 
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
 // paper.js
 $(function() {
   // Get a reference to the canvas object
@@ -30,8 +36,11 @@ $(function() {
 
   // Stroke details
   // path.strokeColor = 'rgb(220,220,220)';
-  path.strokeColor = 'rgb(234,178,156)';
-  path.strokeWidth = 1;
+  // path.strokeColor = 'rgb(234,178,156)'; //main color
+  path.strokeColor = '#000'; //black
+  path.opacity = 0.3;
+  path.strokeWidth = 20;
+
   // path.fullySelected = true;
   // path.dashArray = [2, 4];
 
@@ -48,10 +57,19 @@ $(function() {
   path.smooth();
   paper.view.draw();
   // Click tracking
-  $(window).on('mousedown touchstart', function(e) {
+  $(window).on('mousedown touch', function(e) {
     path.fullySelected = false;
     var y = e.pageY - $(window).scrollTop();
     storage.add(e.pageX, y);
+    if(path.segments.length>15){
+      path.removeSegment(0);
+      // storage.removeItem(0);
+    }
+    var r = getRandomInt(0,255);
+    var g = getRandomInt(0,255);
+    var b = getRandomInt(0,255);
+    //changes color every time clicked
+    // path.strokeColor = 'rgb('+r+','+g+','+b+')';
     path.add(new paper.Point(e.pageX, y));
     // Remove old endpoint
     if (endPoint) endPoint.remove();

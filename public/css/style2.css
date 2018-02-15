@@ -141,7 +141,7 @@ a:-webkit-any-link{
 }
 body .back-holder {
     position: fixed;
-    z-index: -3;
+    z-index: 2;
     top: 0%;
     left: -30%;
     height: 100%;
@@ -152,6 +152,7 @@ body .back-holder {
   top: 0;
   width:100vw;
   height:100vh;
+  z-index: -2;
 }
 body {
   /* background-image: url("/img/backgrounds/white-line.jpg"); */

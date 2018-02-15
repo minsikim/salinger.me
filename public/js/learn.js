@@ -26,7 +26,7 @@ $(function(){
 //INDEX FILTERS
   //:gt,lt(n) => order greater that/ less than
   //:e(n) => equal to (starts with 0), duration not work with color
-  $('.content-box:eq(1) .title').css({color: 'red'}, 1000);
+  $('.content-box:eq(1) .title').css({color: 'rgb(234,178,156)'}, 1000);
 //RELATIONSHIP FILTERS
   //has(a:has(b))searches only the direct children of a,
   //and checkes where b is and changes a
@@ -57,7 +57,14 @@ $(function(){
   //:checked	$(":checked")	All checked input elements
 
 //CHANGE THE ATTRIBUTE WITH $('selector').attr('attr-name', 'value');
-  alert($('img').attr('scr'));
-  $('img').attr('scr', '/logo76.png');
-
+  // alert($('img').attr('scr'));
+  $('img').attr('scr', '/img/logo76.png');
+  //swapping images
+  $('body').delay(500).css('background-image', 'url("/img/backgrounds/yellow.jpg")')
+    .fadeOut(2000, function(){
+    $(this).css('background-image', 'url("/img/backgrounds/white.jpg")').fadeIn(2000);
+  })
+//CLASS METHODS
+  var result = $('.context-wrapper:first').hasClass('title')
+  alert(result);
 });
