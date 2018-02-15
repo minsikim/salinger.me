@@ -65,6 +65,14 @@ $(function(){
     $(this).css('background-image', 'url("/img/backgrounds/white.jpg")').fadeIn(2000);
   })
 //CLASS METHODS
-  var result = $('.context-wrapper:first').hasClass('title')
+  var result = $('span:first').hasClass('salinger');
   alert(result);
+  $('.content-wrapper span').removeClass('title');
+  $('.content-wrapper span').addClass('title2');
+//CONTENT METHODS
+  var oldtext = $('.content-wrapper span:first').text();
+  //the html tags will work
+  $('.content-wrapper span:first').text('I HACKED YOUR SITE');
+  $('.content-wrapper span:eq(2)').text($('input').val());
+  alert($('.search').val());
 });

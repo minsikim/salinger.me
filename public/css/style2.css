@@ -1,3 +1,12 @@
+.search{
+  height: 2em;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  border-bottom: 3px solid rgba(120,120,120,0.5);
+  position: relative;
+  top: 20px;
+  margin-right: 40px;
+}
 .menubar .menu-icon {
   width: 55%;
   height: 2px;
@@ -30,7 +39,8 @@
   background-color: #444;
 }
 .titlebar *{
-  margin: 4px;
+  margin: 4px;\
+
 }
 .titlebar{
   background-color: white;
@@ -59,6 +69,11 @@
   font-weight: 900;
   font-size: 3em;
   text-decoration: underline;
+  line-height: 1em;
+}
+.title2{
+  font-weight: 900;
+  font-size: 3em;
   line-height: 1em;
 }
 .year {
@@ -130,6 +145,7 @@
 }
 .head-row {
   display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
   justify-content: end;
   height:120px;
 }
@@ -140,12 +156,12 @@ a:-webkit-any-link{
   text-decoration: none;
 }
 body .back-holder {
-    position: fixed;
+    /* position: fixed;
     z-index: 2;
     top: 0%;
     left: -30%;
     height: 100%;
-    transition: left 0ms ease-in-out 0ms;
+    transition: left 0ms ease-in-out 0ms; */
 }
 #background{
   position: fixed;
