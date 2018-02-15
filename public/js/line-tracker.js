@@ -1,8 +1,8 @@
 // localStorage point managment
 storage = {
   getData: function() {
-    var points;
-    // = localStorage.getItem('points');
+    // var points;
+    var points = localStorage.getItem('points');
     if (!points) {
       return [];
     } else {
@@ -50,8 +50,9 @@ $(function() {
   // Click tracking
   $(window).on('mousedown touchstart', function(e) {
     path.fullySelected = false;
-    storage.add(e.pageX, e.pageY);
-    path.add(new paper.Point(e.pageX, e.pageY));
+    var y = e.pageY - $(window).scrollTop();
+    storage.add(e.pageX, y);
+    path.add(new paper.Point(e.pageX, y));
     // Remove old endpoint
     if (endPoint) endPoint.remove();
     endPoint = new paper.Path.Circle({ center: new paper.Point(e.pageX, e.pageY), radius: 1.3, fillColor: path.strokeColor });
