@@ -69,10 +69,27 @@ $(function(){
   alert(result);
   $('.content-wrapper span').removeClass('title');
   $('.content-wrapper span').addClass('title2');
+  //toggleClass('classname') -> remove if asigned, asign if not asigned
 //CONTENT METHODS
   var oldtext = $('.content-wrapper span:first').text();
   //the html tags will work
   $('.content-wrapper span:first').text('I HACKED YOUR SITE');
   $('.content-wrapper span:eq(2)').text($('input').val());
   alert($('.search').val());
+
+//TRAVERSING DOM
+  //parents(), sibling(), children()
+  //parents('.content-box')
+  $('span').parents('.content-box:eq(2)').css('border', '4px solid red');
+//EVENT Binding : asigns eventhandler
+  //bind('event', )
+  // $('span').bind('click', function(){
+  //   $(this).css('border', '4px solid red');
+  // });
+  //same as above, click() can be keypress(func), hover() etc.
+  $('span').click(function(){
+    $(this).css('border', '4px solid red');
+  });
+
+
 });
