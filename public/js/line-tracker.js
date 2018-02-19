@@ -29,6 +29,7 @@ function getRandomInt(min, max) {
 $(function() {
   // Get a reference to the canvas object
   var canvas = document.getElementById('background');
+  // canvas.removeAttr('style');
   // Create an empty project and a view for the canvas:
   paper.setup(canvas);
   // Create a Paper.js Path to draw a line into it:
@@ -59,15 +60,18 @@ $(function() {
   // Click tracking
   $(window).on('mousedown touch', function(e) {
     path.fullySelected = false;
+    //checking values
+    console.log('e.pageY val : ' + e.pageY);
+    console.log('window scrolltop() val : ' + $(window).scrollTop());
     var y = e.pageY - $(window).scrollTop();
     storage.add(e.pageX, y);
     if(path.segments.length>15){
       path.removeSegment(0);
       // storage.removeItem(0);
     }
-    var r = getRandomInt(0,255);
-    var g = getRandomInt(0,255);
-    var b = getRandomInt(0,255);
+    // var r = getRandomInt(0,255);
+    // var g = getRandomInt(0,255);
+    // var b = getRandomInt(0,255);
     //changes color every time clicked
     // path.strokeColor = 'rgb('+r+','+g+','+b+')';
     path.add(new paper.Point(e.pageX, y));
@@ -97,7 +101,8 @@ $(function() {
   // Resize canvas
   $(window).on('resize', function(e) {
     // Resize the canvas to the body's height
-    paper.view.viewSize = new paper.Size(window.innerWidth, $(document).height());
+    canvas.removeAttr('style');
+    paper.view.viewSize = new paper.Size(window.innerWidth, window.innerHeight);
     paper.view.draw();
   }).resize();
 });

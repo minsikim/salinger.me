@@ -1,88 +1,224 @@
-.subtitle {
-  font-size: 3em
-
+.search{
+  height: 2em;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  border-bottom: 3px solid rgba(120,120,120,0.5);
+  position: relative;
+  top: 20px;
+  margin-right: 40px;
 }
-.nav-group * span {
-  margin-top: auto;
-  margin-bottom: auto;
-
-}
-.nav-menu {
-  display:inline-block;
-  background: black;
-  color: white;
-  height: 100%;
-  width: 22.5%;
-  font-family: 'Lato', sans-serif;
-}
-
-.nav-ms {
-  background: rgb(76,76,76);
-  color: white;
-  height: 100%;
-  width: 22.5%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-  font-weight: 500;
-}
-
-.nav-salinger {
-  background: white;
-  height: 100%;
+.menubar .menu-icon {
   width: 55%;
+  height: 2px;
+  z-index: 100;
+  margin: 10px;
+  position: relative;
+  top:7px;
+  left:4px;
+  background-color: rgba(255,255,255,0.8);
+}
+.menubar:hover {
+  background-color: #888;
+}
+.ms{
+  font-family: 'Lato';
+  font-weight: 900;
+  font-size: 0.95em;
+  color: #333;
+}
+.salinger{
+  position: relative;
+  top:3px;
   font-family: 'Nothing You Could Do';
+  /* font-weight: 900; */
 }
-
-.nav-group * {
-  display: inline-block;
-  font-size: 25px;
-  zoom: 1;
-  vertical-align: top;
-  text-align: center;
-}
-
-.nav-group {
-  filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.25));
-  align-items : center;
-  width: 260px;
-  height: 50px;
-}
-
 .menubar{
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-auto-rows: 100px
+  justify-content: center;
+  align-items: center;
+  width:60px;
+  background-color: #444;
 }
-.container {
-  /*height:100vh;*/
+.titlebar *{
+  margin: 4px;\
+
+}
+.titlebar{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+}
+.fix-nav {
+  filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.25));
+  width: 260px;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  position: fixed;
+  z-index: 2;
+}
+.info{
+  font-weight: 700;
+  font-size: 1.6em;
+}
+.title:hover{
+  color: rgb(234,178,156);
+}
+.title{
+  font-weight: 900;
+  font-size: 3em;
+  text-decoration: underline;
+  line-height: 1em;
+}
+.title2{
+  font-weight: 900;
+  font-size: 3em;
+  line-height: 1em;
+}
+.year {
+  text-align: right;
+  font-size: 1.2em;
+  position: relative;
+  right: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: rgba(0,0,0,0.3);
+}
+.tag:hover{
+  background-color: rgb(234,178,156);
+  color:white;
+}
+.tag{
+  justify-content: center;
+  height:12px;
+  padding:8px;
+  display: inline-flex;
+  background-color: rgba(255,255,255,0.5);
+  border-radius:12px;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: rgba(0,0,0,0.5);
+}
+.tag-group {
+  justify-content: end;
+  display: grid;
+  grid-auto-flow: dense;
+  margin:3px;
+}
+.content-box{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin-bottom: 1.2em;
+  color: #333;
+}
+.content-info{
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+
+  color: #444;
+}
+.main *{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.content-wrapper{
+    padding:5px;
+    align-items: start;
+
+}
+.wrapper {
   width: 992px;
   margin: auto;
+  padding: 20px;
   padding: 20px
+  color: #555;
+}
+.main-title {
+  text-align: right;
+  font-weight: 900;
+  font-size: 2.7em;
+  border-bottom: 10px solid rgba(120,120,120,0.5);
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #444;
+}
+.head-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  justify-content: end;
+  height:120px;
+}
+.space {
+  height: 100px;
+}
+a:-webkit-any-link{
+  text-decoration: none;
+}
+body .back-holder {
+    /* position: fixed;
+    z-index: 2;
+    top: 0%;
+    left: -30%;
+    height: 100%;
+    transition: left 0ms ease-in-out 0ms; */
+}
+#background{
+  position: fixed;
+  top: 0;
+  /* width:100vw;
+  height:100vh; */
+  z-index: -2;
 }
 body {
-  background: rgb(237,236,230);
+  /* background-image: url("/img/backgrounds/white-line.jpg"); */
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
   font-size:100%;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+  min-height: 100vh;
   /* border: black 1px solid; */
 }
 
+/* * {
+  background: pink;
+  border: 1px solid red;
+} */
+
 @media (max-width:375px) {
-  .nav-group {
-    width: auto;
+  .main-title{
+     display: none;
+  }
+  body {
+    font-size: 4vw;
+  }
+}
+@media (max-width:576px) {
+  .main-title{
+     display: none;
   }
 }
 
 @media (max-width:960px) {
-  .container {
+  .wrapper {
     width: auto;
     margin: auto;
-    padding: 20px
   }
 }
+.footer p {
+  margin: 5px;
+  text-align: right;
+}
+.footer{
+  height: 100px;
+  background-color: #333;
+  color:#aaa;
+  padding:20px;
 
-/* @font-face {
-  font-family: 'Nothing You Could Do', cursive;
-} */
+}
 
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://fonts.googleapis.com/css?family=Nothing+You+Could+Do);

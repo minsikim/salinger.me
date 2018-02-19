@@ -12,5 +12,13 @@
     "test": "mocha"
   },
   "author": "SalingerMS",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minsikim/salinger.me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/minsikim/salinger.me/issues"
+  },
+  "homepage": "https://github.com/minsikim/salinger.me#readme"
 }

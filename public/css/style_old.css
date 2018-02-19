@@ -1,0 +1,88 @@
+.subtitle {
+  font-size: 3em
+
+}
+.nav-group * span {
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+.nav-menu {
+  display:inline-block;
+  background: black;
+  color: white;
+  height: 100%;
+  width: 22.5%;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav-ms {
+  background: rgb(76,76,76);
+  color: white;
+  height: 100%;
+  width: 22.5%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-weight: 500;
+}
+
+.nav-salinger {
+  background: white;
+  height: 100%;
+  width: 55%;
+  font-family: 'Nothing You Could Do';
+}
+
+.nav-group * {
+  display: inline-block;
+  font-size: 25px;
+  zoom: 1;
+  vertical-align: top;
+  text-align: center;
+}
+
+.nav-group {
+  filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.25));
+  align-items : center;
+  width: 260px;
+  height: 50px;
+}
+
+.menubar{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: 100px
+}
+.container {
+  /*height:100vh;*/
+  width: 992px;
+  margin: auto;
+  padding: 20px
+}
+body {
+  background: rgb(237,236,230);
+  font-size:100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* border: black 1px solid; */
+}
+
+@media (max-width:375px) {
+  .nav-group {
+    width: auto;
+  }
+}
+
+@media (max-width:960px) {
+  .container {
+    width: auto;
+    margin: auto;
+    padding: 20px
+  }
+}
+
+/* @font-face {
+  font-family: 'Nothing You Could Do', cursive;
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Nothing+You+Could+Do);

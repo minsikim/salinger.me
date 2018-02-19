@@ -16,5 +16,5 @@ app.listen(3000, function(){
 });
 
 app.get('/', (req,res) => {
-  res.render('index2');
+  res.render('index');
 });
