@@ -18,3 +18,8 @@ app.listen(3000, function(){
 app.get('/', (req,res) => {
   res.render('index');
 });
+
+app.get('/', (req,res) => {
+  res.render('works');
+  $('body').css('::selected', '#333')
+});

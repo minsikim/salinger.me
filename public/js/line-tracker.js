@@ -32,6 +32,8 @@ $(function() {
   // canvas.removeAttr('style');
   // Create an empty project and a view for the canvas:
   paper.setup(canvas);
+  var size = new Size(window.width, window.height);
+  paper.view.viewSize = size;
   // Create a Paper.js Path to draw a line into it:
   var path = new paper.Path();
 

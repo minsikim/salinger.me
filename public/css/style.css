@@ -122,6 +122,28 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.small{
+  font-size: 0.3em;
+  font-weight: 300;
+  line-height: 0.5;
+}
+.introduction{
+  margin: 0.2em !important;
+  margin-right: 0em !important;
+  letter-spacing:-1px;
+}
+.work-link{
+  font-size: 1em;
+  font-weight: 400;
+}
+.introduction-wrapper{
+
+  color: #222;
+  text-align: right;
+  font-size: 3.5em;
+  font-weight: 900;
+}
+
 .content-wrapper{
     padding:5px;
     align-items: start;
@@ -135,6 +157,7 @@
   color: #555;
 }
 .main-title {
+  /* justify-self: end; */
   text-align: right;
   font-weight: 900;
   font-size: 2.7em;
@@ -222,3 +245,7 @@ body {
 
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
+
+::selection {
+  background: rgb(234,178,156); /* WebKit/Blink Browsers */
+}
