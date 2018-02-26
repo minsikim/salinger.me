@@ -27,3 +27,7 @@ app.get('/works', (req,res) => {
 app.get('/dic', (req,res) => {
   res.render('dic');
 });
+
+app.get('/write', (req,res) => {
+  res.render('write');
+});
