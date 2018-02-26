@@ -153,7 +153,8 @@
   width: 992px;
   margin: auto;
   padding: 20px;
-  padding: 20px
+  padding: 20px;
+  min-height: 1vh;
   color: #555;
 }
 .main-title {
