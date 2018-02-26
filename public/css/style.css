@@ -249,3 +249,57 @@ body {
 ::selection {
   background: rgb(234,178,156); /* WebKit/Blink Browsers */
 }
+
+#dic ::selection{
+  background: rgb(201, 198, 237);
+}
+#dic .search{
+  border-bottom: 3px solid rgba(255,255,255,0.5);
+}
+#dic .main-title{
+  color: #eee;
+  border-bottom: 10px solid rgba(255,255,255,0.5);
+  font-size: 2.3em;
+  margin: 0px;
+}
+#dic .dic-wrapper{
+  display:grid;
+}
+#dic .dic-box{
+  display: grid;
+  grid-row-gap: 8px;
+  margin-bottom: 20px;
+}
+#dic .dic-word {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 50px;
+  align-items: end;
+}
+#dic .word{
+  color: #eee;
+  font-family: 'Lato';
+  font-weight: 900;
+  font-size: 2.5em;
+}
+#dic .tag-group{
+  justify-self: end;
+  display: inline;
+}
+#dic .tag{
+  font-family: 'Lato';
+  font-weight: 600;
+  font-size: 0.8em;
+  margin: 6px;
+  color: #333;
+}
+#dic .tag:hover{
+  background-color: #333;
+}
+#dic .desc{
+  color: #ccc;
+}
+#dic .main-title-div{
+  justify-content: end;
+  align-items: center;
+}

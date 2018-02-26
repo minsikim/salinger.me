@@ -19,7 +19,11 @@ app.get('/', (req,res) => {
   res.render('index');
 });
 
-app.get('/', (req,res) => {
+app.get('/works', (req,res) => {
   res.render('works');
-  $('body').css('::selected', '#333')
+  // $(document).css('::selected', '#333')
+});
+
+app.get('/dic', (req,res) => {
+  res.render('dic');
 });
