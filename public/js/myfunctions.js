@@ -1,14 +1,3 @@
-//following 2 is the same
-//all inside will start right after browser inits DOM
-// $(document).ready(function(){
-//
-// });
-//
-// $(function(){
-//
-// });
-
-
 $(function(){
 //BASIC SELECTORS
   // $('somthingtoselect').css('css lines') -> ex
