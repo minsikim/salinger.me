@@ -31,7 +31,3 @@ app.get('/dic', (req,res) => {
 app.get('/write', (req,res) => {
   res.render('write');
 });
-
-function write_dic(){
-  window.location.replace("/dic");
-}

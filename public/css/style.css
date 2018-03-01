@@ -313,10 +313,31 @@ body {
 .form-group{
   color: #ccc;
   display: grid;
-  grid-template-rows: 1fr 1fr 4fr 1fr;
-  justify-items: stretch;
+  grid-template-rows: 1fr 0.6fr 2fr 4fr 0.5fr;
+  justify-content: stretch;
+  grid-row-gap: 1em;
 }
-.form-group div{
-  margin: auto;
-
+.form-group div textarea{
+  height: 60%;
+  font-size: 1em;
+  font-weight: 400;
+}
+.form-group div input{
+  height: 50%;
+  font-size: 2em;
+  font-weight: 700;
+}
+.form-group div input,textarea{
+  margin-top: 5px;
+  font-family: 'Lato';
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  border: none;
+  border-bottom: 5px solid rgba(255,255,255,0.5);
+  color: white;
+  padding: 10px;
+  line-height: 1.5;
+}
+.form-group label{
+  margin-bottom: 10px;
 }

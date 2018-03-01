@@ -1,15 +1,15 @@
 //- ./write.jade
-form.form-group(action="write_dic()",method="post")
+.form-group
   .input-title
     label(for="input-title") Title
     input(id="input-title",type="text", value="Less than 50 characters")
   .input-tags
     label(for="input-tags") Tags
-    textarea(id="input-short-description", value="Write short description")
+    textarea(id="input-tags", value="seperate with (,)(/)")
   .input-short-description
     label(for="input-short-description") Short description
     textarea(id="input-short-description", value="Write short description")
   .input-description
     label(for="input-description") Main description
     textarea(id="input-description", value="Write long description")
-  button(type="submit") 쓰기
+  button(type="submit", onclick="write_dic()") 쓰기
