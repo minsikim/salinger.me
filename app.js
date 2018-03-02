@@ -30,4 +30,5 @@ app.get('/dic', (req,res) => {
 
 app.get('/write', (req,res) => {
   res.render('write');
+  $('.main-title').html('My Dictionary');
 });

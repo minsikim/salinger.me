@@ -1,16 +1,22 @@
-var mysql = require('mysql');
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "0531dmswl"
-});
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("SQL Connected!");
-})();
-
-
 function write_dic(){
+  var mysql = require('mysql');
+  if (mysql){
+    console.log('required mysql'+mysql)
+  }
+  else{
+    console.log('cannot require mysql');
+  }
+  var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "0531dmswl",
+    database: "salingerms"
+  });
+
+  con.connect(function(err) {
+    if (err) throw err;
+    console.log("SQL Connected!");
+  })();
 
     var title = $(".input-title").val();
     var s_desc = $(".input-short-description").val();
