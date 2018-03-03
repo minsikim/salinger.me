@@ -17,8 +17,29 @@
   left:4px;
   background-color: rgba(255,255,255,0.8);
 }
+.dropdown ul{
+  display: grid;
+}
+.dropdown .ddlist:hover{
+  color: #fff;
+}
+.dropdown .ddlist{
+  list-style: none;
+  font-size: 150%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.dropdown{
+  display: none;
+  position: fixed;
+  top: 120px;
+  width: 260px;
+  background-color: #333;
+  color: rgba(255,255,255,0.5);
+}
 .menubar:hover {
   background-color: #888;
+  cursor: pointer;
 }
 .ms{
   font-family: 'Lato';

@@ -1,13 +1,21 @@
 //- ./includes/headrow.jade
 .head-row
   .fix-nav
-    .menubar
+    .menubar(id='menubar')
       .menu-icon
       .menu-icon
       .menu-icon
     a.titlebar(href='/')
       span.salinger Salinger
       span.ms  MS
+    .dropdown
+      ul
+        a(href='/')
+          li.ddlist About
+        a(href='/works')
+          li.ddlist Works
+        a(href='/dic')
+          li.ddlist Dictionary
   div(style="height:60px;")
   input.search(type="text", placeholder='search')
   div
