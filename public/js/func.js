@@ -1,15 +1,7 @@
-$(function(){
-  $(document).ready(function(){
-    $("#menubar").click(function(){
-      document.alert('Clicked!')
-    });
-  });
+$('span').click(function(){
+    alert("The paragraph was clicked.");
 });
-
-
-
-
-
+  // alert('Clicked!')
 // function write_dic(){
 //   var mysql = require('mysql');
 //   if (mysql){
