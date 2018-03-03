@@ -16,7 +16,7 @@ function write_dic(){
   con.connect(function(err) {
     if (err) throw err;
     console.log("SQL Connected!");
-  })();
+  });
 
     var title = $(".input-title").val();
     var s_desc = $(".input-short-description").val();

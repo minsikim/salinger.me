@@ -7,24 +7,12 @@ include ./includes/head.jade
       canvas(id='background')
       //- , style='width:100vw height:100vh;
     .wrapper
-      .head-row
-        .fix-nav
-          .menubar
-            .menu-icon
-            .menu-icon
-            .menu-icon
-          .titlebar
-            span.salinger Salinger
-            span.ms  MS
-        div(style="height:60px;")
-        input.search(type="text", value='search')
-        div
-          span.main-title Works
-        
-      
+      include ./includes/headrow.jade
+      script(type='text/javascript')
+        $('.main-title').html('Hello')
       .content-wrapper
         .introduction-wrapper
           .introduction Hello I'm Salinger</br><div class='small'>MinSeong Kim, South Korea</div></br><span class='small'>an</t></span> Architect/</br><span class='small'>aemsp;</t></span>Developer
-          .work-link > to Works
+          a.work-link(href='/works') > to Works
     .space
   include ./includes/footer.jade

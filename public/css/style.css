@@ -206,7 +206,9 @@ body {
   min-height: 100vh;
   /* border: black 1px solid; */
 }
-
+a {
+    color: inherit;
+}
 /* * {
   background: pink;
   border: 1px solid red;
