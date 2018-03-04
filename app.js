@@ -57,8 +57,8 @@ app.post('/write/add', urlencodedParser, (req,res) => {
 
   var sql = "INSERT INTO dic "
   +"(title, short_description, description, tags) "
-  +"VALUES ("+title+", "+s_desc+", "+l_desc+", "+tags+")";
-  db.query(sql, function(err, result){
+  +"VALUES (?, ?, ?, ?)";
+  db.query(sql, [title, s_desc, l_desc, tags],function(err, result){
     if(err) {
       throw err;
       res.alert('An Error has occured');
