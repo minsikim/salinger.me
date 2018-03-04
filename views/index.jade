@@ -1,5 +1,4 @@
 include ./includes/basic.jade
-include ./includes/head.jade
   //- body
   body(style="background-image: url(\"/img/backgrounds/yellow.jpg\");")
     
@@ -16,3 +15,8 @@ include ./includes/head.jade
           a.work-link(href='/works') > to Works
     .space
   include ./includes/footer.jade
+  .info-alert
+    p Ctrl+A = Select<br>Del = Delete<br>Click anywhere to draw Path
+  script(src="js/line-tracker.js")
+  //- script
+  //-   $('.info-alert').hide(3000);

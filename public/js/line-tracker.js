@@ -1,3 +1,4 @@
+
 // localStorage point managment
 storage = {
   getData: function() {
@@ -26,23 +27,25 @@ function getRandomInt(min, max) {
 
 
 // paper.js
+// $('body').append('<div class="background"></div>');
 $(function() {
   // Get a reference to the canvas object
   var canvas = document.getElementById('background');
   // canvas.removeAttr('style');
   // Create an empty project and a view for the canvas:
   paper.setup(canvas);
-  var size = new Size(window.width, window.height);
-  paper.view.viewSize = size;
+  // var size = new Size(window.width, window.height);
+  // paper.view.viewSize = size;
   // Create a Paper.js Path to draw a line into it:
   var path = new paper.Path();
 
   // Stroke details
   // path.strokeColor = 'rgb(220,220,220)';
   // path.strokeColor = 'rgb(234,178,156)'; //main color
-  path.strokeColor = '#000'; //black
-  path.opacity = 0.3;
-  path.strokeWidth = 20;
+  path.strokeColor = 'rgb(234,178,156)'; //black
+  path.opacity = 0.5;
+  path.strokeWidth = 10;
+  path.selectedColor = 'rgb(234,178,156)';
 
   // path.fullySelected = true;
   // path.dashArray = [2, 4];
@@ -57,11 +60,11 @@ $(function() {
       endPoint = new paper.Path.Circle({ center: new paper.Point(x, y), radius: 1.3, fillColor: path.strokeColor });
     }
   });
-  path.smooth();
+  path.smooth({ type: 'catmull-rom', factor: 1 });
   paper.view.draw();
   // Click tracking
   $(window).on('mousedown touch', function(e) {
-    path.fullySelected = false;
+    path.fullySelected = true;
     //checking values
     console.log('e.pageY val : ' + e.pageY);
     console.log('window scrolltop() val : ' + $(window).scrollTop());
@@ -103,7 +106,7 @@ $(function() {
   // Resize canvas
   $(window).on('resize', function(e) {
     // Resize the canvas to the body's height
-    canvas.removeAttr('style');
+    // canvas.removeAttr('style');
     paper.view.viewSize = new paper.Size(window.innerWidth, window.innerHeight);
     paper.view.draw();
   }).resize();

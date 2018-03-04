@@ -25,6 +25,8 @@
 }
 .dropdown .ddlist{
   list-style: none;
+  font-family: 'Lato';
+  font-weight: 700;
   font-size: 150%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -32,7 +34,7 @@
 .dropdown{
   display: none;
   position: fixed;
-  top: 120px;
+  top: 100px;
   width: 260px;
   background-color: #333;
   color: rgba(255,255,255,0.5);
@@ -178,6 +180,9 @@
   min-height: 100vh;
   color: #555;
 }
+.main-title-box{
+  justify-items: end;
+}
 .main-title {
   /* justify-self: end; */
   text-align: right;
@@ -190,12 +195,22 @@
 }
 .head-row {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr auto;
   justify-content: end;
   height:120px;
 }
 .space {
   height: 100px;
+}
+.info-alert{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0,0,0,0.5);
+  color: white;
+  z-index: 1;
 }
 a:-webkit-any-link{
   text-decoration: none;
@@ -211,8 +226,8 @@ body .back-holder {
 #background{
   position: fixed;
   top: 0;
-  /* width:100vw;
-  height:100vh; */
+  width:100vw;
+  height:100vh;
   z-index: -2;
 }
 body {
@@ -247,6 +262,10 @@ a {
   }
 }
 @media (max-width:576px) {
+  .add-icon {
+    right: 20px;
+    bottom: 20px;
+  }
   .search{
     display: none;
   }
@@ -278,6 +297,25 @@ a {
 
 ::selection {
   background: rgb(234,178,156); /* WebKit/Blink Browsers */
+}
+.add-icon {
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: white;
+  border-radius:39px;
+  color: rgb(68,93,175);
+  font-size: 2em;
+  font-weight: 900;
+  font-family: 'Lato';
+  filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.25));
+}
+.add-icon:hover{
+  background-color: #444;
+  color: white;
 }
 
 #dic ::selection{

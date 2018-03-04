@@ -48,7 +48,6 @@ app.get('/write', (req,res) => {
 
 app.post('/write/add', (req,res) => {
   var body = req.body;
-
   // var title = $(".input-title").val();
   // var s_desc = $(".input-short-description").val();
   // var l_desc = $(".input-description").val();
@@ -59,5 +58,4 @@ app.post('/write/add', (req,res) => {
   // var sql = "INSERT INTO articles "
   // +"(title, short_description, description, tags) "
   // +"VALUES ("+title+", "+s_desc+", "+l_desc+", "+tags+")";
-  res.render('write');
 });
