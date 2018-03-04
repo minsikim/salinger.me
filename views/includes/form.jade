@@ -2,14 +2,14 @@
 form.form-group(action='/write/add',method='post')
   .input-title
     label(for="input-title") Title
-    input(id="input-title",type="text", placeholder="Less than 50 characters")
+    input(name="input_title",id="input-title",type="text", placeholder="Less than 50 characters")
   .input-tags
     label(for="input-tags") Tags
-    textarea(id="input-tags", placeholder="seperate with (,)(/)")
+    textarea(name="input_tags",id="input-tags", placeholder="seperate with (,)(/)")
   .input-short-description
     label(for="input-short-description") Short description
-    textarea(id="input-short-description", placeholder="Write short description")
+    textarea(name="input_short_description",id="input-short-description", placeholder="Write short description")
   .input-description
     label(for="input-description") Main description
-    textarea(id="input-description", placeholder="Write long description")
+    textarea(name="input_description",id="input-description", placeholder="Write long description")
   button(type="submit") Write

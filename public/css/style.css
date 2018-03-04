@@ -1,3 +1,14 @@
+.footer-info{
+  justify-self: end;
+}
+.icon-box{
+  display: flex;
+  justify-items: start;
+}
+.icon{
+  max-height: 30px;
+  margin: 20px;
+}
 .search{
   height: 2em;
   background-color: rgba(0,0,0,0);
@@ -202,15 +213,25 @@
 .space {
   height: 100px;
 }
+.info-alert div{
+  font-size: 150%;
+  margin: auto;
+  position: relative;
+  top: 46%;
+  align-self: center;
+}
 .info-alert{
+  display: none;
+  text-align: center;
+  align-items: center;
   position: fixed;
   top:0;
   left:0;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.5);
   color: white;
-  z-index: 1;
+  z-index: 5;
 }
 a:-webkit-any-link{
   text-decoration: none;
@@ -289,7 +310,10 @@ a {
   background-color: #333;
   color:#aaa;
   padding:20px;
-
+  display: flex;
+  flex-direction: row;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato);

@@ -16,9 +16,12 @@ db.connect(function(err) {
   console.log("SQL Connected!");
 });
 
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({extended:false});
+
 //use file in server
 app.use(express.static('public'));
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 
 app.set('view engine', 'jade');
@@ -38,24 +41,29 @@ app.get('/works', (req,res) => {
 });
 
 app.get('/dic', (req,res) => {
+
   res.render('dic');
 });
 
 app.get('/write', (req,res) => {
   res.render('write');
-
 });
 
-app.post('/write/add', (req,res) => {
-  var body = req.body;
-  // var title = $(".input-title").val();
-  // var s_desc = $(".input-short-description").val();
-  // var l_desc = $(".input-description").val();
-  // var tags = $(".input-tags").val();
+app.post('/write/add', urlencodedParser, (req,res) => {
+  var title = req.body.input_title;
+  var s_desc = req.body.input_short_description;
+  var l_desc = req.body.input_description;
+  var tags = req.body.input_tags;
 
-  // var regex = /[./ ]../
-
-  // var sql = "INSERT INTO articles "
-  // +"(title, short_description, description, tags) "
-  // +"VALUES ("+title+", "+s_desc+", "+l_desc+", "+tags+")";
+  var sql = "INSERT INTO dic "
+  +"(title, short_description, description, tags) "
+  +"VALUES ("+title+", "+s_desc+", "+l_desc+", "+tags+")";
+  db.query(sql, function(err, result){
+    if(err) {
+      throw err;
+      res.alert('An Error has occured');
+    };
+    console.log('1 record inserted');
+  })
+  res.redirect('/dic');
 });

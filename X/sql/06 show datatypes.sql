@@ -1,4 +1,3 @@
 SHOW DATABASES;
 USE salingerms;
-show tables;
-select * from dic;
+SHOW FIELDS FROM dic;

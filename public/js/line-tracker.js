@@ -1,4 +1,5 @@
-
+$('.info-alert').fadeIn(1000).delay(2000).fadeOut(1000);
+var info = true;
 // localStorage point managment
 storage = {
   getData: function() {
@@ -64,10 +65,14 @@ $(function() {
   paper.view.draw();
   // Click tracking
   $(window).on('mousedown touch', function(e) {
+    if(info){
+      $('.info-alert').fadeOut(1000);
+      info = false;
+    }
     path.fullySelected = true;
     //checking values
-    console.log('e.pageY val : ' + e.pageY);
-    console.log('window scrolltop() val : ' + $(window).scrollTop());
+    // console.log('e.pageY val : ' + e.pageY);
+    // console.log('window scrolltop() val : ' + $(window).scrollTop());
     var y = e.pageY - $(window).scrollTop();
     storage.add(e.pageX, y);
     if(path.segments.length>15){
