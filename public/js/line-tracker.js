@@ -1,4 +1,10 @@
-$('.info-alert').fadeIn(1000).delay(2000).fadeOut(1000);
+// $('.info-alert').fadeIn(400).delay(1500).fadeOut(500);
+$(function(){
+  $('.info-alert').fadeIn(400);
+  $(document.body).on('click touchstart', function(){
+    $('.info-alert').fadeOut(500);
+  })
+});
 var info = true;
 // localStorage point managment
 storage = {

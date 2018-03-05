@@ -50,6 +50,8 @@ app.get('/write', (req,res) => {
 });
 
 app.post('/write/add', urlencodedParser, (req,res) => {
+  res.alert('hello');
+
   var title = req.body.input_title;
   var s_desc = req.body.input_short_description;
   var l_desc = req.body.input_description;
@@ -61,7 +63,6 @@ app.post('/write/add', urlencodedParser, (req,res) => {
   db.query(sql, [title, s_desc, l_desc, tags],function(err, result){
     if(err) {
       throw err;
-      res.alert('An Error has occured');
     };
     console.log('1 record inserted');
   })
