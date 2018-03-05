@@ -3,6 +3,7 @@
 // view-engine.js
 var express = require('express');
 var app = express();
+var favicon = require('serve-favicon');
 //connect mysql
 var mysql = require('mysql');
 var db = mysql.createConnection({
@@ -22,7 +23,7 @@ var urlencodedParser = bodyParser.urlencoded({extended:false});
 //use file in server
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/public'));
-
+app.use(favicon(__dirname+'/public/img/favicon.ico'));
 
 app.set('view engine', 'jade');
 app.set('views', './views');
