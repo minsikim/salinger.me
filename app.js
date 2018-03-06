@@ -52,8 +52,6 @@ app.get('/write', (req,res) => {
 });
 
 app.post('/write/add', urlencodedParser, (req,res) => {
-  res.alert('hello');
-
   var title = req.body.input_title;
   var s_desc = req.body.input_short_description;
   var l_desc = req.body.input_description;
