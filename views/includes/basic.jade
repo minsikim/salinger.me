@@ -2,6 +2,12 @@
 doctype html
 html
   head
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-115307768-1")
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-115307768-1');
+
     meta(charset="utf-8", name="viewport", content="width=device-width, initial-scale=1")
     title Salinger MS
     link(rel="icon", href="favicon.ico?v=1.1")
