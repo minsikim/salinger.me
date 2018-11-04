@@ -6,17 +6,17 @@ var app = express();
 var favicon = require('serve-favicon');
 var path = require('path');
 //connect mysql
-var mysql = require('mysql');
-var db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "0531dmswl",
-  database: "salingerms"
-});
-db.connect(function(err) {
-  if (err) throw err;
-  console.log("SQL Connected!");
-});
+// var mysql = require('mysql');
+// var db = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "0531dmswl",
+//   database: "salingerms"
+// });
+// db.connect(function(err) {
+//   if (err) throw err;
+//   console.log("SQL Connected!");
+// });
 
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({extended:false});
@@ -60,11 +60,11 @@ app.post('/write/add', urlencodedParser, (req,res) => {
   var sql = "INSERT INTO dic "
   +"(title, short_description, description, tags) "
   +"VALUES (?, ?, ?, ?)";
-  db.query(sql, [title, s_desc, l_desc, tags],function(err, result){
-    if(err) {
-      throw err;
-    };
-    console.log('1 record inserted');
-  })
+  // db.query(sql, [title, s_desc, l_desc, tags],function(err, result){
+  //   if(err) {
+  //     throw err;
+  //   };
+  //   console.log('1 record inserted');
+  // })
   res.redirect('/dic');
 });

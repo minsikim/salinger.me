@@ -1,4 +1,5 @@
 .footer-info{
+  width: 100%;
   justify-self: end;
 }
 .icon-box{
@@ -45,7 +46,7 @@
 .dropdown{
   display: none;
   position: fixed;
-  top: 100px;
+  top: 60px;
   width: 260px;
   background-color: #333;
   color: rgba(255,255,255,0.5);
@@ -73,7 +74,7 @@
   background-color: #444;
 }
 .titlebar *{
-  margin: 4px;\
+  margin: 4px;
 
 }
 .titlebar{
@@ -315,6 +316,7 @@ a {
   text-align: right;
 }
 .footer{
+  /* width: 85%; */
   height: 100px;
   background-color: #333;
   color:#aaa;
